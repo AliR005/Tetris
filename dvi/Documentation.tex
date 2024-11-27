@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+
+\title{Tetris in C. Documentation}
+\author{AliR}
+\begin{document}
+\maketitle
+
+\section{Введение}
+Тетрис — это классическая аркадная игра, в которой игрок управляет падающими блоками (тетромино), с целью заполнения горизонтальных линий на игровом поле. Игра заканчивается, когда блоки достигают верхней части поля. Этот проект реализует игру Тетрис на языке программирования C с использованием библиотеки ncurses для управления графикой и вводом.
+
+\section{Установка}
+Для установки игры выполните следующие шаги:
+\begin{enumerate}
+    \item Соберите проект с помощью Makefile:
+    \begin{verbatim}
+    make
+    \end{verbatim}
+    \item Установите игру:
+    \begin{verbatim}
+    make install (Установка произойдет в "/usr/local/bin")
+    Либо: make install DESTDIR="/ваш путь"
+    \end{verbatim}
+\end{enumerate}
+
+\section{Использование}
+После установки запустите игру, выполнив команду:
+\begin{verbatim}
+./Tetris
+\end{verbatim}
+Управление осуществляется с помощью клавиш:
+\begin{itemize}
+    \item Enter: начало игры.
+    \item p: пауза.
+    \item Esc: выход из игры.
+    \item Key Left: перемещение блока влево.
+    \item Key Right: перемещение блока вправо.
+    \item Key Down: ускорение падения блока.
+    \item Space: вращение блока.
+\end{itemize}
+
+\end{document}
