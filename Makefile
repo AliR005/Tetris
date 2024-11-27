@@ -10,8 +10,8 @@ DESTDIR ?= /
 
 
 DOC_SRC = dvi/Documentation.tex
-DVI_OUTPUT_DIR = dvi/docs/
-PDF_OUTPUT_DIR = dvi/docs/
+DVI_OUTPUT_DIR = dvi/
+PDF_OUTPUT_DIR = dvi/
 
 ifeq ($(OS),Linux)
 	TEST_LIBS = -lsubunit -lrt -lm -pthread
@@ -33,7 +33,7 @@ uninstall:
 	rm -f $(DESTDIR)$(BINDIR)/Tetris
 
 clean:
-	rm -f $(OBJ) Tetris high_score.txt $(TEST_OBJ) dvi/docs/* tetris.tar.gz
+	rm -f $(OBJ) Tetris high_score.txt $(TEST_OBJ) dvi/*.log dvi/*.aux dvi/*.pdf tetris.tar.gz
 
 dvi: $(DOC_SRC)
 	latex $(DOC_SRC)
